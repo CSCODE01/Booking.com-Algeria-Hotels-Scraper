@@ -107,7 +107,7 @@ class BookingDeepScraper:
             data['raw_price'] = price_el.inner_text().strip() if price_el else None
 
             try:
-                # الحل: استهداف الكلاس المباشر للنص f6b6d2a959 لضمان التقاط المرافق الشهيرة بدقة
+                
                 fac_locator = page.locator('.f6b6d2a959')
                 fac_texts = fac_locator.all_inner_texts()
                 clean_facs = [f.strip() for f in fac_texts if f.strip()]
